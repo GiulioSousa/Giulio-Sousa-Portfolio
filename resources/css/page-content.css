@@ -1,0 +1,579 @@
+/* This code contains all the elements and classes that are used only on specific pages on the project */
+/* HOME PAGE */
+.banner {
+    display: grid;
+    grid-template: 350px 1fr / 1fr;
+    place-items: center;
+    padding: 3.5rem;
+}
+
+.banner__text {
+    font-size: 2.5rem;
+    grid-row: 2;
+    height: 160px;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.banner__card {
+    padding: 3.5rem;
+    border-radius: 1rem;
+}
+
+.banner__photo {
+    border-radius: 50%;
+    width: 350px;
+}
+
+.banner__card h1 {
+    font-size: 3rem;
+    padding-top: 1rem;
+}
+
+.banner__card p {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+/* ABOUT PAGE */
+.about {
+    display: grid;
+    grid-template: 1fr / 1fr 40%;
+    align-items: center;
+}
+
+.about__text {
+    padding: 0 2.5rem;
+    align-self: flex-start;
+}
+
+.about__text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.about__text p {
+    text-align: justify;
+    line-height: 1.75rem;
+    font-size: 1.2rem;
+}
+
+.about__photo {
+    flex-shrink: 0;
+}
+
+.about__photo img {
+    border-radius: 2rem;
+    width: 100%;
+    height: auto;
+    background-size: contain;
+}
+
+/* SKILLS PAGE */
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skill__item {
+    flex-shrink: 0;
+    width: 250px;
+    height: 350px;
+    display: grid;
+    grid-template-rows: auto 60px;
+    border-radius: 20px;
+    place-items: center;
+}
+
+.skill__item:hover {
+    background-color: rgba(222, 172, 23, .15);
+    transition: .5s;
+}
+
+.skill__item img {
+    width: 100%;
+    padding: 1rem;
+}
+
+.skill__item h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    align-self: flex-start;
+}
+
+.skills h2 {
+    font-size: 3rem;
+    padding: 0 2.5rem 2.5rem;
+    text-transform: uppercase;
+
+}
+
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2.5rem;
+    gap: 2.5rem;
+}
+
+.skills ul li div {
+    width: 250px;
+    height: 250px;
+    background-color: #0a0a0a;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* PORTFOLIO PAGE */
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.portfolio h2 {
+    justify-self: flex-start;
+    font-size: 3rem;
+    padding: 0 2.5rem 2.5rem;
+    text-transform: uppercase;
+}
+
+.portfolio__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+    place-items: center;
+    padding: 2rem;
+    gap: 5rem;
+    margin-top: 4rem;
+}
+
+.portfolio__item {
+    width: 250px;
+    flex-shrink: 0;
+    border-radius: 20px;
+}
+
+.portfolio__item:hover {
+    background-color: rgba(222, 172, 23, .15);
+    transition: .5s;
+}
+
+.portfolio__item--soon {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.portfolio__item--soon h3 {
+    justify-self: flex-end;
+}
+
+.portfolio__item--soon span {
+    font-size: 6rem;
+    padding-bottom: 2rem;
+}
+
+.portfolio__item--soon div {
+    width: 50px;
+    height: 50px;
+    background-color: aquamarine;
+    border-radius: 25px;
+}
+
+.portfolio img {
+    width: 250px;
+    padding: 2rem;
+}
+
+.portfolio h3 {
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* CONTACT PAGE */
+.contact {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.contact h1 {
+    padding-left: 3rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contact__banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    z-index: 1;
+}
+
+.contact__banner::before {
+    width: 100%;
+    height: 500px;
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, .05);
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
+    clip-path: polygon(0% 0%,
+            75% 0%,
+            65% 100%,
+            0% 100%);
+    border: 1px solid rgba(255, 255, 255, .25);
+    z-index: -1;
+    border-top: 2px solid rgba(255, 255, 255, .1);
+    border-left: 2px solid rgba(255, 255, 255, .1);
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+}
+
+.contact__banner-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 35%;
+    object-fit: cover;
+    z-index: -2;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    clip-path: polygon(28.4% 0%,
+            100% 0%,
+            100% 100%,
+            0% 100%);
+    object-position: top;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-top: 2px solid rgba(255, 255, 255, .1);
+}
+
+.contact__banner-content {
+    padding: 3.5rem;
+    width: 65%;
+}
+
+.contact__banner-content h2 {
+    font-size: 2rem;
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+.contact__banner-items {
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact__banner-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.contact__banner-item img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.contact__banner-item img:hover {
+    box-shadow: 0 0 50px rgba(255, 255, 255, .25);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.contact__banner-item figcaption {
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+.contact__separator {
+    width: 90%;
+    height: 10px;
+    border: 1px solid rgba(255, 255, 255, .7);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .4);
+    border-radius: 5px;
+    background: linear-gradient(to left, #ecc440, #fffa8a, #ddac17, #fffa8a);
+    box-sizing: border-box;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.contact form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.contact form h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+}
+
+.contact form label {
+    font-size: 1.25rem;
+    padding: 1.5rem 0 .75rem 0;
+    font-weight: 700;
+}
+
+.contact form input:not(.form__btn-submit),
+.contact form textarea {
+    font-size: 1rem;
+    padding-left: 1rem;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact form input {
+    height: 2.5rem;
+}
+
+.contact form textarea {
+    resize: none;
+    padding-top: .5rem;
+}
+
+.form__btn-submit {
+    width: 200px;
+    border: none;
+    background: #fe8;
+    color: #000;
+    font-weight: 500;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+    margin: 2rem;
+}
+
+.form__alert {
+    /* position: absolute; */
+    bottom: -20px;
+    color: #f31;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: .5rem;
+}
+
+/* E-MAIL SENT PAGE */
+.email-sent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.email-sent img {
+    max-width: 400px;
+    padding: 0 2.5rem;
+}
+
+.email-sent h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 2rem;
+}
+
+.email-sent p {
+    font-size: 1.25rem;
+    padding: 0 2rem 2rem;
+}
+
+.email-sent a {
+    background-color: #FE8;
+    color: #000;
+    padding: 1.5rem;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.form__btn-submit:hover,
+.email-sent a:hover {
+    box-shadow: 1px 1px 10px #fe8;
+    transition: .25s;
+}
+
+/* RESPONSIVE AREA */
+/* responsive - tablets */
+@media screen and (max-width:1024px) {
+    /* BANNER PAGE */
+    .banner__photo {
+        grid-row: 1;
+    }
+
+    /* ABOUT PAGE */
+    .about {
+        grid-template: auto 1fr / 1fr;
+        padding: 2rem;
+    }
+
+    .about__text {
+        grid-row: 2;
+        padding: 2.5rem;
+    }
+
+    .about__text p {
+        font-size: 1.5rem;
+    }
+
+    .about__photo {
+        grid-row: 1;
+        max-width: 500px;
+        place-self: center;
+    }
+
+    /* SKILLS PAGE */
+    .skill__item {
+        width: 150px;
+        height: 200px;
+    }
+
+    .skill__item h3 {
+        font-size: 1rem;
+    }
+
+    /* PORTFOLIO PAGE */
+    .portfolio__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    /* CONTACT PAGE */
+    .container--contact {
+        padding: 3.5rem;
+    }
+}
+
+/* responsive - mobile */
+@media screen and (max-width:768px) {
+    /* HOME PAGE */
+    .banner__text {
+        font-size: 1.5rem;
+    }
+
+    .banner__photo {
+        width: 300px;
+    }
+
+    /* ABOUT PAGE */
+    .about__text {
+        padding: 2rem 0;
+    }
+
+    /* CONTACT PAGE */
+    .container--contact {
+        padding: 0;
+    }
+
+    .contact {
+        padding: 1.5rem;
+    }
+
+    .contact h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .contact__banner {
+        height: 600px;
+    }
+
+    .contact__banner::before {
+        height: 600px;
+        clip-path: polygon(0% 0%,
+            65% 0%,
+            55% 100%,
+            0% 100%);
+    }
+
+    .contact__banner-image {
+        width: 45%;
+        clip-path: polygon(22% 0%,
+            100% 0%,
+            100% 100%,
+            0% 100%);
+    }
+
+    .contact__banner-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .contact__banner-items {
+        height: 100%;
+        flex-direction: column;
+        padding: 1.5rem 0;
+    }
+
+    .contact__banner-content h2 {
+        font-size: 1.25rem;
+        padding-bottom: 1.5rem;
+        box-sizing: border-box;
+    }
+
+    .contact__banner-item {
+        padding: 1.5rem 2rem;
+    }
+
+    .contact__banner-item img {
+        width: 100px;
+    }
+
+    .contact__banner-item figcaption {
+        font-size: 1.25rem;
+        padding: 1rem;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    /* E-MAIL SENT PAGE */
+    .email-sent img {
+        width: 300px;
+        padding-top: 3.5rem;
+    }
+
+    .email-sent h1 {
+        font-size: 2rem;
+    }
+
+    .email-sent p {
+        font-size: 1rem;
+    }
+}
